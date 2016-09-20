@@ -4,15 +4,15 @@
 
 ## Table of Contents
 
- 1. Compiling
- 1. Const and let
- 1. Classes
+ 1. [Compiling](#compiling)
+ 1. [Const and let](#const-and-let)
+ 1. [Classes](#classes)
  
  
 ## Compiling
 
 To use our cool new ES6 features, we need to compile back to ES5, which is safe for your parents' browsers.
-Check out [ES6 Boilerplate repo](https://github.com/hansvana/es6boiler) for my current build workflow.
+Check out my [ES6 Boilerplate repo](https://github.com/hansvana/es6boiler) for my current build workflow.
  
 I use 
   * `Gulp` as the build system
@@ -21,13 +21,13 @@ I use
   * `vinyl-source-stream` and `vinyl-buffer` to get from browserify to gulp
   * `gulp-uglify` to minify the code
   * `sourcemaps` to keep the client-side code debuggable
-  * `browser-sync` to keep the browser synced with the code during development*
+  * `browser-sync` to keep the browser synced with the code during development<sup>1</sup>
   
 To install all of these: `npm install --save-dev gulp browserify babelify babel-preset-es2015 gulp gulp-uglify gulp-sourcemaps vinyl-source-stream vinyl-buffer browser-sync`
 
 Optionally I often add `gulp-sass` and `bootstrap` for CSS.
 
-* If you're using an editor without a built-in webserver, I recommend adding `lite-server`, which comes with `browser-sync` out of the box. 
+<sup>1</sup> If you're using an editor without a built-in webserver, I recommend adding `lite-server`, which comes with `browser-sync` out of the box. 
 
 ## Const and let
 
@@ -67,13 +67,13 @@ function foo() {
 
 [https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Classes](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Classes)
 
-    ```javascript
-    class Foo {
-      constructor(a, b) {
-        this.a = a;
-        this.b = b;
-      }
-    }
-    
-    const f = new Foo();
-    ```
+```javascript
+class Foo {
+  constructor(a, b) {
+    this.a = a;
+    this.b = b;
+  }
+}
+
+const f = new Foo();
+```
