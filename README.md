@@ -7,6 +7,7 @@
  1. [Compiling](#compiling)
  1. [Const and let](#const-and-let)
  1. [Classes](#classes)
+ 1. [Arrow Functions](#arrow-functions)
  
  
 ## Compiling
@@ -33,7 +34,7 @@ Optionally I often add `gulp-sass` and `bootstrap` for CSS.
 
 ES6 replaces `var` with two new variable keywords:
 
-  * `[const](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Statements/const)` to create an unchangeable binding to a value. This prevents bugs and improves readability. 
+  * [`const`](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Statements/const) to create an unchangeable binding to a value. This prevents bugs and improves readability. 
   
       ```javascript
       const a = 1;
@@ -49,7 +50,7 @@ ES6 replaces `var` with two new variable keywords:
       c.push(4); // no error
       ```
 
-  * `[let](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Statements/let)` for when variables need to be reassigned. In practice you should default to `const`, and only use `let` when absolutely necessary.
+  * [`let`](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Statements/let) for when variables need to be reassigned. In practice you should default to `const`, and only use `let` when absolutely necessary.
   
 Both `const` and `let` are block-scoped, compared to `var` which is function-scoped.
  
@@ -65,7 +66,8 @@ function foo() {
  
 ## Classes
 
-[Classes](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Classes) are JavaScript objects, with some sugar sprinkled on top to make them behave like classes in other languages.
+[`Classes`](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Classes) are JavaScript objects, with some sugar sprinkled on top to make them behave like classes in other languages.
+Internal properties and methods are referred to with `this`.
 
 ```javascript
 class Foo {
@@ -144,7 +146,7 @@ class Foo {
 }
 ```
 
-Enter the `[arrow function](https://www.sitepoint.com/es6-arrow-functions-new-fat-concise-syntax-javascript/)`, which has a much more intuitive handling of `this`.
+Enter the [`arrow function`](https://www.sitepoint.com/es6-arrow-functions-new-fat-concise-syntax-javascript/), which has a much more intuitive handling of `this`.
 
 ```javascript
 class Foo {
