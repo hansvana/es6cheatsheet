@@ -2,6 +2,14 @@
 
 *Copying isn't cheating*
 
+
+## Better guides
+
+For more in-depth information
+
+  * [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript) The Holy Grail of 'how to do JavaScript', as far as I'm concerned.
+  * [ES6-features.org](http://es6-features.org/#Constants) All the new bits, compared to the old bits.
+
 ## Table of Contents
 
  1. [Compiling](#compiling)
