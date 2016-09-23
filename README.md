@@ -16,7 +16,7 @@ For more in-depth information
  1. [Const and let](#const-and-let)
  1. [Classes](#classes)
  1. [Arrow Functions](#arrow-functions)
- 
+ 1. [Array Methods](#array-methods)
  
 ## Compiling
 
@@ -166,5 +166,80 @@ class Foo {
     });
   }
 }
+```
+
+## Array Methods
+
+Most of these aren't new to ES6, but still awesome to have. As you can see we use arrow functions with most of them.
+There are many more cool methods. Check [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) for a complete list.
+
+```javascript
+const myArray = [0, 1, 2, 3, 5, 8, 13, 21, 34];
+```
+
+#### add and remove items
+
+```javascript
+newArray.push( item ); // add a new item to the end of an Array
+newArray.unshift( item ); // add a new item to the front of an Array
+newArray.pop(); // remove the last item of an Array
+newArray.shift(); //remove the first item of an Array
+```
+
+#### filter
+Filtering out values smaller than 10.
+
+```javascript
+const newArray = myArray.filter( item => {
+  return item >= 10;
+});
+
+// newArray = [13, 21, 34]
+```
+
+#### find
+Returns the first value that matches your statement, if nothing is found `undefined` is returned.
+
+```javascript
+const foundItem = myArray.find( item => {
+  return item >= 10;
+});
+
+// foundItem = 13
+```
+
+#### findIndex
+Returns the index of the first value that matches your statement, if nothing is found `-1` is returned.
+
+```javascript
+const foundIndex = myArray.findIndex( item => {
+  return item >= 10;
+});
+
+// findIndex = 6
+```
+
+#### forEach
+Executes a function for each array element.
+
+```javascript
+myArray.forEach( item => {
+  console.log(item >= 10);
+});
+
+// 0
+// 1
+// ...
+```
+
+#### map
+Executes a function for each Array element, and returns a new array with the results.
+
+```javascript
+const newArray = myArray.forEach( item => {
+  return item + 1;
+});
+
+// newArray = [1, 2, 3, 4, 6, 9, 14, 22, 35]
 ```
 
